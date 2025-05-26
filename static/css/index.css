@@ -1,0 +1,104 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #022142;
+    color: #fff;
+    padding: 1rem 0; /* Reduced vertical padding */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-align: left;
+}
+
+.logo h1 {
+    margin-bottom: 0.2rem;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+#how-it-works {
+  padding: 2rem 0;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+
+#how-it-works h2 {
+  margin-bottom: 1rem;
+}
+
+#how-it-works ol {
+  padding-left: 20px;
+}
+
+#assessment {
+    text-align: center;
+    padding: 3rem 0; /* Increased padding for more prominence */
+}
+
+#start-assessment {
+    background-color: #0bb934;
+    color: #fff;
+    padding: 1.2rem 2.5rem; /* Slightly larger button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+#start-assessment:hover {
+    background-color: #035e18;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}

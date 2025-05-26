@@ -1,0 +1,6 @@
+Python 3.12.5
+
+
+conda create --name health-stroke python=3.12.5
+
+conda activate health-stroke

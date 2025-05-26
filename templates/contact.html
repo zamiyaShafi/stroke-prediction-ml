@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Stroke Risk Assessment</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/contact.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Stroke Risk Assessment</h1>
+                <p>Predicting stroke risk for a healthier future.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/predict">Predict</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contact-page">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Please use the form below or reach out via the provided contact information.</p>
+
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                        <div id="form-response" class="response-hidden"></div>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h2>Our Contact Information</h2>
+                    <p><strong>Email:</strong> <a href="mailto:info@strokeriskassessment.com">info@strokeriskassessment.com</a></p>
+                    <p><strong>Phone:</strong> +91 8000000000</p>
+                    <p><strong>Address:</strong></p>
+                    <address>
+                        123 Health Way<br>
+                        Knowledge Park, Mangaluru<br>
+                        Karnataka, India - 575001
+                    </address>
+                    <p><strong>Business Hours:</strong></p>
+                    <p>Monday - Friday: 9:00 AM to 5:00 PM IST</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Disclaimer: This tool is for informational purposes only and not a substitute for medical advice.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // In a real application, you would send this form data to your backend
+            // to handle the submission (e.g., send an email).
+            // For this example, we'll simulate a successful submission.
+
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+
+            console.log("Contact Form Data:", { name, email, subject, message });
+
+            const responseDiv = document.getElementById('form-response');
+            responseDiv.textContent = "Your message has been sent successfully! We will get back to you as soon as possible.";
+            responseDiv.className = "response-success"; // Apply success styling
+
+            // Optionally, you can reset the form after a successful submission
+            this.reset();
+        });
+    </script>
+</body>
+</html>
